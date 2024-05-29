@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Angajati>
+  <Angajat>
+    <Nume>Popescu</Nume>
+    <Prenume>Ion</Prenume>
+    <Id>1</Id>
+    <Departament>HR</Departament>
+    <ListaTaskuri>
+      <Task>
+        <Descriere>Sarcina 1</Descriere>
+        <DataLimita>2024-04-20T12:00:00</DataLimita>
+        <Scor>5</Scor>
+      </Task>
+      <Task>
+        <Descriere>Sarcina 2</Descriere>
+        <DataLimita>2024-04-22T14:00:00</DataLimita>
+        <Scor>7</Scor>
+      </Task>
+    </ListaTaskuri>
+    <ListaEvenimente>
+      <EvenimentCalendar>
+        <Descriere>Reuniune echipe</Descriere>
+        <DataOra>2024-04-25T10:00:00</DataOra>
+      </EvenimentCalendar>
+      <EvenimentCalendar>
+        <Descriere>Training noua tehnologie</Descriere>
+        <DataOra>2024-04-28T15:00:00</DataOra>
+      </EvenimentCalendar>
+    </ListaEvenimente>
+  </Angajat>
+  <Angajat>
+    <Nume>Ionescu</Nume>
+    <Prenume>Maria</Prenume>
+    <Id>2</Id>
+    <Departament>Dezvoltare Software</Departament>
+    <ListaTaskuri>
+      <Task>
+        <Descriere>Sarcina 3</Descriere>
+        <DataLimita>2024-04-19T09:00:00</DataLimita>
+        <Scor>6</Scor>
+      </Task>
+      <Task>
+        <Descriere>Sarcina 4</Descriere>
+        <DataLimita>2024-04-23T16:00:00</DataLimita>
+        <Scor>8</Scor>
+      </Task>
+    </ListaTaskuri>
+    <ListaEvenimente>
+      <EvenimentCalendar>
+        <Descriere>Prezentare proiect</Descriere>
+        <DataOra>2024-04-26T11:00:00</DataOra>
+      </EvenimentCalendar>
+      <EvenimentCalendar>
+        <Descriere>Interviu candidat</Descriere>
+        <DataOra>2024-04-29T09:30:00</DataOra>
+      </EvenimentCalendar>
+    </ListaEvenimente>
+  </Angajat>
+  <Angajat>
+    <Nume>Pop</Nume>
+    <Prenume>Enis</Prenume>
+    <Id>3</Id>
+    <Departament>HR</Departament>
+    <ListaTaskuri>
+      <Task>
+        <Descriere>Sarcina 1</Descriere>
+        <DataLimita>2024-04-20T12:00:00</DataLimita>
+        <Scor>5</Scor>
+      </Task>
+      <Task>
+        <Descriere>Sarcina 2</Descriere>
+        <DataLimita>2024-04-22T14:00:00</DataLimita>
+        <Scor>7</Scor>
+      </Task>
+    </ListaTaskuri>
+    <ListaEvenimente>
+      <EvenimentCalendar>
+        <Descriere>Reuniune echipe</Descriere>
+        <DataOra>2024-04-25T10:00:00</DataOra>
+      </EvenimentCalendar>
+      <EvenimentCalendar>
+        <Descriere>Training noua tehnologie</Descriere>
+        <DataOra>2024-04-28T15:00:00</DataOra>
+      </EvenimentCalendar>
+    </ListaEvenimente>
+  </Angajat>
+  <Angajat>
+    <Nume>Stanescu</Nume>
+    <Prenume>Crina</Prenume>
+    <Id>4</Id>
+    <Departament>IT</Departament>
+    <ListaTaskuri>
+      <Task>
+        <Descriere>Task 1</Descriere>
+        <DataLimita>2024-05-01T09:00:00</DataLimita>
+        <Scor>6</Scor>
+      </Task>
+      <Task>
+        <Descriere>Task 2</Descriere>
+        <DataLimita>2024-05-05T16:00:00</DataLimita>
+        <Scor>8</Scor>
+      </Task>
+    </ListaTaskuri>
+    <ListaEvenimente>
+      <EvenimentCalendar>
+        <Descriere>Meeting echipa</Descriere>
+        <DataOra>2024-05-10T11:00:00</DataOra>
+      </EvenimentCalendar>
+      <EvenimentCalendar>
+        <Descriere>Interviu nou angajat</Descriere>
+        <DataOra>2024-05-15T09:30:00</DataOra>
+      </EvenimentCalendar>
+    </ListaEvenimente>
+  </Angajat>
+  <Angajat>
+    <Nume>Dragomir</Nume>
+    <Prenume>Andrei</Prenume>
+    <Id>5</Id>
+    <Departament>Financiar</Departament>
+    <ListaTaskuri>
+      <Task>
+        <Descriere>Task 3</Descriere>
+        <DataLimita>2024-04-25T13:00:00</DataLimita>
+        <Scor>7</Scor>
+      </Task>
+      <Task>
+        <Descriere>Task 4</Descriere>
+        <DataLimita>2024-04-30T10:00:00</DataLimita>
+        <Scor>9</Scor>
+      </Task>
+    </ListaTaskuri>
+    <ListaEvenimente>
+      <EvenimentCalendar>
+        <Descriere>Prezentare raport lunar</Descriere>
+        <DataOra>2024-05-05T14:00:00</DataOra>
+      </EvenimentCalendar>
+      <EvenimentCalendar>
+        <Descriere>Training bugetare</Descriere>
+        <DataOra>2024-05-12T09:00:00</DataOra>
+      </EvenimentCalendar>
+    </ListaEvenimente>
+  </Angajat>
+  <Angajat>
+    <Nume>Stan</Nume>
+    <Prenume>Andreea</Prenume>
+    <Id>6</Id>
+    <Departament>Marketing</Departament>
+    <ListaTaskuri>
+      <Task>
+        <Descriere>Task 5</Descriere>
+        <DataLimita>2024-04-27T11:00:00</DataLimita>
+        <Scor>5</Scor>
+      </Task>
+      <Task>
+        <Descriere>Task 6</Descriere>
+        <DataLimita>2024-05-01T16:00:00</DataLimita>
+        <Scor>8</Scor>
+      </Task>
+    </ListaTaskuri>
+    <ListaEvenimente>
+      <EvenimentCalendar>
+        <Descriere>Sedinta strategica</Descriere>
+        <DataOra>2024-05-07T10:00:00</DataOra>
+      </EvenimentCalendar>
+      <EvenimentCalendar>
+        <Descriere>Training promovare</Descriere>
+        <DataOra>2024-05-14T14:00:00</DataOra>
+      </EvenimentCalendar>
+    </ListaEvenimente>
+  </Angajat>
+  <Angajat>
+    <Nume>Georgescu</Nume>
+    <Prenume>Adrian</Prenume>
+    <Id>7</Id>
+    <Departament>Productie</Departament>
+    <ListaTaskuri>
+      <Task>
+        <Descriere>Task 7</Descriere>
+        <DataLimita>2024-04-30T08:00:00</DataLimita>
+        <Scor>6</Scor>
+      </Task>
+      <Task>
+        <Descriere>Task 8</Descriere>
+        <DataLimita>2024-05-03T15:00:00</DataLimita>
+        <Scor>7</Scor>
+      </Task>
+    </ListaTaskuri>
+    <ListaEvenimente>
+      <EvenimentCalendar>
+        <Descriere>Productie in masa</Descriere>
+        <DataOra>2024-05-08T08:00:00</DataOra>
+      </EvenimentCalendar>
+      <EvenimentCalendar>
+        <Descriere>Training calitate</Descriere>
+        <DataOra>2024-05-13T13:00:00</DataOra>
+      </EvenimentCalendar>
+    </ListaEvenimente>
+  </Angajat>
+  <Angajat>
+    <Nume>Prodan</Nume>
+    <Prenume>Ana-Maria</Prenume>
+    <Id>8</Id>
+    <Departament>Steaua</Departament>
+    <ListaTaskuri />
+    <ListaEvenimente />
+  </Angajat>
+  <Angajat>
+    <Nume>Reghe</Nume>
+    <Prenume>Campf</Prenume>
+    <Id>9</Id>
+    <Departament>Rapidu</Departament>
+    <ListaTaskuri />
+    <ListaEvenimente />
+  </Angajat>
+  <Angajat>
+    <Nume>Vasile</Nume>
+    <Prenume>Silviu</Prenume>
+    <Id>11</Id>
+    <Departament>Cum vine ca</Departament>
+    <ListaTaskuri />
+    <ListaEvenimente />
+  </Angajat>
+</Angajati>

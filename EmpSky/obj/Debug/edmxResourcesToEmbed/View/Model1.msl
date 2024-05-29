@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EmployeesModelStoreContainer" CdmEntityContainer="EmployeesEntities">
+    <EntitySetMapping Name="Angajatis">
+      <EntityTypeMapping TypeName="EmployeesModel.Angajati">
+        <MappingFragment StoreEntitySet="Angajati">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nume" ColumnName="Nume" />
+          <ScalarProperty Name="Prenume" ColumnName="Prenume" />
+          <ScalarProperty Name="Departament" ColumnName="Departament" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EvenimenteCalendars">
+      <EntityTypeMapping TypeName="EmployeesModel.EvenimenteCalendar">
+        <MappingFragment StoreEntitySet="EvenimenteCalendar">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="AngajatId" ColumnName="AngajatId" />
+          <ScalarProperty Name="Descriere" ColumnName="Descriere" />
+          <ScalarProperty Name="DataOra" ColumnName="DataOra" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Taskuris">
+      <EntityTypeMapping TypeName="EmployeesModel.Taskuri">
+        <MappingFragment StoreEntitySet="Taskuri">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="AngajatId" ColumnName="AngajatId" />
+          <ScalarProperty Name="Descriere" ColumnName="Descriere" />
+          <ScalarProperty Name="DataLimita" ColumnName="DataLimita" />
+          <ScalarProperty Name="Scor" ColumnName="Scor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

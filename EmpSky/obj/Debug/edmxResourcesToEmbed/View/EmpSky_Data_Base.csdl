@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EmpSkyModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Angajati">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nume" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Prenume" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Departament" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="EvenimenteCalendars" Relationship="Self.FK__Eveniment__Angaj__3C69FB99" FromRole="Angajati" ToRole="EvenimenteCalendar" />
+    <NavigationProperty Name="Taskuris" Relationship="Self.FK__Taskuri__Angajat__398D8EEE" FromRole="Angajati" ToRole="Taskuri" />
+  </EntityType>
+  <EntityType Name="EvenimenteCalendar">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AngajatId" Type="Int32" />
+    <Property Name="Descriere" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DataOra" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Angajati" Relationship="Self.FK__Eveniment__Angaj__3C69FB99" FromRole="EvenimenteCalendar" ToRole="Angajati" />
+  </EntityType>
+  <EntityType Name="Taskuri">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AngajatId" Type="Int32" />
+    <Property Name="Descriere" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DataLimita" Type="DateTime" Precision="3" />
+    <Property Name="Scor" Type="Int32" />
+    <NavigationProperty Name="Angajati" Relationship="Self.FK__Taskuri__Angajat__398D8EEE" FromRole="Taskuri" ToRole="Angajati" />
+  </EntityType>
+  <Association Name="FK__Eveniment__Angaj__3C69FB99">
+    <End Role="Angajati" Type="Self.Angajati" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="EvenimenteCalendar" Type="Self.EvenimenteCalendar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Angajati">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="EvenimenteCalendar">
+        <PropertyRef Name="AngajatId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Taskuri__Angajat__398D8EEE">
+    <End Role="Angajati" Type="Self.Angajati" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Taskuri" Type="Self.Taskuri" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Angajati">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Taskuri">
+        <PropertyRef Name="AngajatId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="EmpSkyEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Angajatis" EntityType="Self.Angajati" />
+    <EntitySet Name="EvenimenteCalendars" EntityType="Self.EvenimenteCalendar" />
+    <EntitySet Name="Taskuris" EntityType="Self.Taskuri" />
+    <AssociationSet Name="FK__Eveniment__Angaj__3C69FB99" Association="Self.FK__Eveniment__Angaj__3C69FB99">
+      <End Role="Angajati" EntitySet="Angajatis" />
+      <End Role="EvenimenteCalendar" EntitySet="EvenimenteCalendars" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Taskuri__Angajat__398D8EEE" Association="Self.FK__Taskuri__Angajat__398D8EEE">
+      <End Role="Angajati" EntitySet="Angajatis" />
+      <End Role="Taskuri" EntitySet="Taskuris" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

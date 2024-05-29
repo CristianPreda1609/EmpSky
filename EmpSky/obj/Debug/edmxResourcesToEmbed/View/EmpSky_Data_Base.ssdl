@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EmpSkyModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Angajati">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nume" Type="nvarchar" MaxLength="50" />
+    <Property Name="Prenume" Type="nvarchar" MaxLength="50" />
+    <Property Name="Departament" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="EvenimenteCalendar">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AngajatId" Type="int" />
+    <Property Name="Descriere" Type="nvarchar" MaxLength="100" />
+    <Property Name="DataOra" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Taskuri">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AngajatId" Type="int" />
+    <Property Name="Descriere" Type="nvarchar" MaxLength="100" />
+    <Property Name="DataLimita" Type="datetime" />
+    <Property Name="Scor" Type="int" />
+  </EntityType>
+  <Association Name="FK__Eveniment__Angaj__3C69FB99">
+    <End Role="Angajati" Type="Self.Angajati" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="EvenimenteCalendar" Type="Self.EvenimenteCalendar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Angajati">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="EvenimenteCalendar">
+        <PropertyRef Name="AngajatId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Taskuri__Angajat__398D8EEE">
+    <End Role="Angajati" Type="Self.Angajati" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Taskuri" Type="Self.Taskuri" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Angajati">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Taskuri">
+        <PropertyRef Name="AngajatId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="EmpSkyModelStoreContainer">
+    <EntitySet Name="Angajati" EntityType="Self.Angajati" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EvenimenteCalendar" EntityType="Self.EvenimenteCalendar" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Taskuri" EntityType="Self.Taskuri" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Eveniment__Angaj__3C69FB99" Association="Self.FK__Eveniment__Angaj__3C69FB99">
+      <End Role="Angajati" EntitySet="Angajati" />
+      <End Role="EvenimenteCalendar" EntitySet="EvenimenteCalendar" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Taskuri__Angajat__398D8EEE" Association="Self.FK__Taskuri__Angajat__398D8EEE">
+      <End Role="Angajati" EntitySet="Angajati" />
+      <End Role="Taskuri" EntitySet="Taskuri" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
